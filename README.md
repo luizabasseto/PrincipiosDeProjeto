@@ -66,14 +66,3 @@ Este repositório contém exemplos de código que ilustram quatro princípios im
 -> Reduz o acoplamento e torna o sistema mais modular, além de garantir que o encapsulamento funcione de forma correta, já que essas longas cadeias, quebravam ele. Assim servindo para ocultar a informação que não seja necessária para o funcionamento daquele método ou função.
 
 ### Exemplo e explicação
-
-
-
-#### Problema resolvido
-
-O método `sendMail()` acessava `conta.getCliente().getEmail()`, violando Demeter. A correção encapsulou a lógica em um método direto em `Conta`, ocultando detalhes internos da estrutura.
-
----
-
-## 📁 Organização do Repositório
-
