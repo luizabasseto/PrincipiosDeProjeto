@@ -2,7 +2,7 @@
 
 Este repositório contém exemplos de código que ilustram quatro princípios importantes de projeto de software. Cada exemplo está documentado com explicações do que é o princípio, para que serve, e como o código implementado demonstra sua importância na prática.
 
--> Todos os códigos foram desenvolvidos na linguagem Java, os códigos apresentados foram retirados de um trabalho antigo, e foram colocadas apenas as partes relativas aos princípios para explicação.
+-> Todos os códigos foram desenvolvidos na linguagem Java, os códigos apresentados foram retirados de um trabalho antigo, exceto pelo exemplo do Princípio Aberto-Fechado, e foram colocadas apenas as partes relativas aos princípios para explicação.
 
 ## Princípios Escolhidos
 
