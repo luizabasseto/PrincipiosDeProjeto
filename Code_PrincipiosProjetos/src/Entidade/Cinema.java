@@ -10,6 +10,7 @@ import java.util.List;
  */
 public class Cinema {
      private Filme filme;
+     private String filmeCartaz;
 
     public Cinema() {
     }
@@ -22,6 +23,9 @@ public class Cinema {
     public void setFilme(Filme filme) {
         this.filme = filme;
     }
-               
 
+     public void setFillmeEmCartaz(Filme filme){
+          this.filmeCartaz = filme.getNomeFilme();
+               
+     }
 }  
