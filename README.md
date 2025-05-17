@@ -34,22 +34,22 @@ O problema aqui se tratava de um crud básico de filmes, e como todo crud é pre
 ### Exemplo e explicação
 
 Por Exemplo, vamos supor que tenhamos essa lista de strings a seguir, mas que eu desejo alterar a forma de ordenar dela, ao invés de ordenar alfabeticamente, eu queira ordenar pelo tamanho da palavra.
->List<String> nomes;
-nomes = Arrays.asList("joao", "maria", "alexandre", "ze");
-Collections.sort(nomes);
-
-System.out.println(nomes);  
-// resultado: ["alexandre","joao","maria","ze"]
+>List<String> nomes;\
+>nomes = Arrays.asList("joao", "maria", "alexandre", "ze");\
+>Collections.sort(nomes);\
+>
+>System.out.println(nomes);\ 
+>// resultado: ["alexandre","joao","maria","ze"]\
 
 Então para resolver este problema é preciso utilizar de um comparador para ver o tamanho das letras da seguinte forma: 
->Comparator<String> comparador = new Comparator<String>() {
->  public int compare(String s1, String s2) {
->    return s1.length() - s2.length();
->  }
->};
->Collections.sort(nomes, comparador);
->System.out.println(nomes);   
->// resultado: [ze, joao, maria, alexandre]
+>Comparator<String> comparador = new Comparator<String>() {\
+>  public int compare(String s1, String s2) {\
+>    return s1.length() - s2.length();\
+>  }\
+>};\
+>Collections.sort(nomes, comparador);\
+>System.out.println(nomes);\
+>// resultado: [ze, joao, maria, alexandre]\
 
 Dessa forma, apesar do método .sort da classe Colections não ser modificado o seu próprio método, é possível perceber que eles está aberto a modificações já que foi possível estender para a forma que fosse desejado de ordenação da lista de strings.
 
