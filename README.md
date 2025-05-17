@@ -36,7 +36,7 @@ O problema aqui se tratava de um crud básico de filmes, e como todo crud é pre
 Por Exemplo, vamos supor que tenhamos essa lista de strings a seguir, mas que eu desejo alterar a forma de ordenar dela, ao invés de ordenar alfabeticamente, eu queira ordenar pelo tamanho da palavra.
 >List<String> nomes;\
 >nomes = Arrays.asList("joao", "maria", "alexandre", "ze");\
->Collections.sort(nomes);\
+>Collections.sort(nomes);
 >
 >System.out.println(nomes);\ 
 >// resultado: ["alexandre","joao","maria","ze"]\
@@ -66,7 +66,7 @@ Dessa forma, apesar do método .sort da classe Colections não ser modificado o 
 [Link do Exemplo](Code_PrincipiosProjetos/src/Entidade/FilmeInfantil.java)
 
 Aqui foi suposto que uma classe nova chamada Filme Infantil, fosse criada herdando atributos da classe Filme. 
->Filme filme = new FilmeInfantil(1, "Divertidamente", "Livre");
+>Filme filme = new FilmeInfantil(1, "Divertidamente", "Livre");\
 >System.out.println(filme.getNome_filme());
  
 Se na Main fosse manipulado a criação de um objeto novo filme como descrito no código acima, mas fosse usado o construtor do Filme Infantil, ao tentarmos imprimir o titulo do filme, ou seja, o seu nome, ainda sim o código funcionaria corretamente, assim seguindo o princípio de Liskov que permite a substituição da clase pai por uma das subclasses herdadas.
