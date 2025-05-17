@@ -1,4 +1,4 @@
-# PrincipiosDeProjeto
+# Princípios De Projeto
 
 Este repositório contém exemplos de código que ilustram quatro princípios importantes de projeto de software. Cada exemplo está documentado com explicações do que é o princípio, para que serve, e como o código implementado demonstra sua importância na prática.
 
@@ -19,9 +19,9 @@ Este repositório contém exemplos de código que ilustram quatro princípios im
 
 ### Exemplo e explicação
 
-->[Link do Exemplo](https://github.com/luizabasseto/PrincipiosDeProjeto/blob/812c9bcd23878862acccdef10a41e5b7899746c6/Code_PrincipiosProjetos/src/Entidade/Filme.java#L19C5-L21C10)
+->[Link do Exemplo](https://github.com/luizabasseto/PrincipiosDeProjeto/blob/8fcf3a53daa25d052552afe0c9c103eaa6a2137d/Code_PrincipiosProjetos/src/Controle/ControleFilme.java#L23C5-L26C1)
 
-O problema aqui se tratava de um crud básico de filmes e seus atributos eram privados, para isso foi preciso utilizar uma função get() para pegar o valor do nome do filme. A função faz apenas esse papel, ou seja, tem essa única responsabilidade de pegar o nome do filme, sem pegar id, sem fazer qualquer esta função sem ser essa.
+O problema aqui se tratava de um crud básico de filmes, e como todo crud é preciso adicionar na lista um valor, por isso na package de Controle, há o método adicionar que faz sua única função de adicionar um valor de filme  a lista de filmes. Seguindo o princípio de responsabilidade única.
 
 ## 2. O — Open-Closed Principle (Princípio Aberto-Fechado)
 
@@ -63,4 +63,4 @@ O problema aqui se tratava de um crud básico de filmes e seus atributos eram pr
 
 [Link para o Código de Exemplo](https://github.com/luizabasseto/PrincipiosDeProjeto/blob/db22c93923aafc0631dd38b0716ce5b6ada954c7/Code_PrincipiosProjetos/src/Entidade/Cinema.java#L22-L24)
 
-
+-> Aqui segue o crud de filme, agora com o crud do cinema, em que é necessário imprimir os filmes que estão em cartaz no cinema. E para isso foi criado direto o método PrintFilmeEmCartaz, que acessa diretamente o filme em cartaz da classe Cinema pelo método getFilmeEmCartaz() sem precisar chamar outros métodos, para acessar a classe cinema e em seguida acessar a classe Filme para aí então consegui o nome do filme.
