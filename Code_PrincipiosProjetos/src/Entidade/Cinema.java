@@ -25,7 +25,7 @@ public class Cinema {
     }
 
      public void setFillmeEmCartaz(Filme filme){
-          this.filmeCartaz = filme.getNomeFilme();
+          this.filmeCartaz = filme.getNome_filme();
                
      }
 }  
