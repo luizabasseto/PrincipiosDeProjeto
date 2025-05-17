@@ -2,7 +2,7 @@
 
 Este repositório contém exemplos de código que ilustram quatro princípios importantes de projeto de software. Cada exemplo está documentado com explicações do que é o princípio, para que serve, e como o código implementado demonstra sua importância na prática.
 
--> Todos os códigos serão desenvolvidos na linguagem Java, os códigos apresentados foram retirados de um trabalho antigo, e foram colocadas apenas as partes relativas aos princípios para explicação.
+-> Todos os códigos foram desenvolvidos na linguagem Java, os códigos apresentados foram retirados de um trabalho antigo, e foram colocadas apenas as partes relativas aos princípios para explicação.
 
 ## Princípios Escolhidos
 
@@ -33,11 +33,25 @@ O problema aqui se tratava de um crud básico de filmes, e como todo crud é pre
 
 ### Exemplo e explicação
 
--> 
+Por Exemplo, vamos supor que tenhamos essa lista de strings a seguir, mas que eu desejo alterar a forma de ordenar dela, ao invés de ordenar alfabeticamente, eu queira ordenar pelo tamanho da palavra.
+>List<String> nomes;
+nomes = Arrays.asList("joao", "maria", "alexandre", "ze");
+Collections.sort(nomes);
 
-#### Problema resolvido
+System.out.println(nomes);  
+// resultado: ["alexandre","joao","maria","ze"]
 
+Então para resolver este problema é preciso utilizar de um comparador para ver o tamanho das letras da seguinte forma: 
+>Comparator<String> comparador = new Comparator<String>() {
+>  public int compare(String s1, String s2) {
+>    return s1.length() - s2.length();
+>  }
+>};
+>Collections.sort(nomes, comparador);
+>System.out.println(nomes);   
+>// resultado: [ze, joao, maria, alexandre]
 
+Dessa forma, apesar do método .sort da classe Colections não ser modificado o seu próprio método, é possível perceber que eles está aberto a modificações já que foi possível estender para a forma que fosse desejado de ordenação da lista de strings.
 
 ## 3. L — Liskov Substitution Principle (Princípio da substituição de Liskov)
 
@@ -53,7 +67,8 @@ O problema aqui se tratava de um crud básico de filmes, e como todo crud é pre
 
 Aqui foi suposto que uma classe nova chamada Filme Infantil, fosse criada herdando atributos da classe Filme. 
 >Filme filme = new FilmeInfantil(1, "Divertidamente", "Livre");
->System.out.println(filme.getNome_filme()); 
+>System.out.println(filme.getNome_filme());
+ 
 Se na Main fosse manipulado a criação de um objeto novo filme como descrito no código acima, mas fosse usado o construtor do Filme Infantil, ao tentarmos imprimir o titulo do filme, ou seja, o seu nome, ainda sim o código funcionaria corretamente, assim seguindo o princípio de Liskov que permite a substituição da clase pai por uma das subclasses herdadas.
 
 ## 4. Princípio de Demeter
@@ -66,6 +81,6 @@ Se na Main fosse manipulado a criação de um objeto novo filme como descrito no
 
 ### Exemplo e explicação
 
-[Link para o Código de Exemplo](https://github.com/luizabasseto/PrincipiosDeProjeto/blob/db22c93923aafc0631dd38b0716ce5b6ada954c7/Code_PrincipiosProjetos/src/Entidade/Cinema.java#L22-L24)
+[Link do Exemplo](https://github.com/luizabasseto/PrincipiosDeProjeto/blob/db22c93923aafc0631dd38b0716ce5b6ada954c7/Code_PrincipiosProjetos/src/Entidade/Cinema.java#L22-L24)
 
 -> Aqui segue o crud de filme, agora com o crud do cinema, em que é necessário imprimir os filmes que estão em cartaz no cinema. E para isso foi criado direto o método PrintFilmeEmCartaz, que acessa diretamente o filme em cartaz da classe Cinema pelo método getFilmeEmCartaz() sem precisar chamar outros métodos, para acessar a classe cinema e em seguida acessar a classe Filme para aí então consegui o nome do filme.
