@@ -6,14 +6,14 @@ Este repositório contém exemplos de código que ilustram quatro princípios im
 
 ## Princípios Escolhidos
 
-1. S — Single Responsiblity Principle (Princípio da responsabilidade única)
+1. S — Single Responsibility Principle (Princípio da responsabilidade única)
 2. O — Open-Closed Principle (Princípio Aberto-Fechado)
 3. L — Liskov Substitution Principle (Princípio da substituição de Liskov)
 4. Demeter 
 
-## 1.  S — Single Responsiblity Principle (Princípio da responsabilidade única)
+## 1.  S — Single Responsibility Principle (Princípio da responsabilidade única)
 ### O que é? 
--> O principio de responsabilidade única afirma que uma classe ou função deve ter apenas uma única responsabilidade, ou seja, ela deve ser responsável por uma única parte de uma funcionalidade do sistema e deve existir um único motivo para modificar uma classe.
+-> O princípio de responsabilidade única afirma que uma classe ou função deve ter apenas uma única responsabilidade, ou seja, ela deve ser responsável por uma única parte de uma funcionalidade do sistema e deve existir um único motivo para modificar uma classe.
 ### Para que serve?
 -> Este princípio serve para o código ser coeso e facilitar a manutenção já que mudanças em uma responsabilidade não afetam outras.
 
@@ -21,7 +21,7 @@ Este repositório contém exemplos de código que ilustram quatro princípios im
 
 ->[Link do Exemplo](https://github.com/luizabasseto/PrincipiosDeProjeto/blob/8fcf3a53daa25d052552afe0c9c103eaa6a2137d/Code_PrincipiosProjetos/src/Controle/ControleFilme.java#L23C5-L26C1)
 
-O problema aqui se tratava de um crud básico de filmes, e como todo crud é preciso adicionar na lista um valor, por isso na package de Controle, há o método adicionar que faz sua única função de adicionar um valor de filme  a lista de filmes. Seguindo o princípio de responsabilidade única.
+O problema aqui se tratava de um crud básico de filmes, e como todo crud é preciso adicionar na lista um valor, por isso na package de Controle, há o método adicionar que faz sua única função de adicionar um valor de filme  a lista de filmes. Seguindo o princípio da responsabilidade única.
 
 ## 2. O — Open-Closed Principle (Princípio Aberto-Fechado)
 
@@ -29,17 +29,18 @@ O problema aqui se tratava de um crud básico de filmes, e como todo crud é pre
 -> Uma classe deve estar fechada para modificações, mas aberta para extensões.
 
 ### Para que serve?
--> Permite que o sistema seja estendido com novas funcionalidades sem alterar o código existente, prevenindo estragar a funcionalidade principal.
+-> Permite que o sistema seja expandido com novas funcionalidades sem alterar o código existente, prevenindo estragar a funcionalidade principal.
 
 ### Exemplo e explicação
-O código a seguir de exemplo, foi retirado do livro Engenharia de Software Moderna de Marco Tulio Valente do capítulo 5, sobre Princípios de Software.[Link do Capítulo](https://engsoftmoderna.info/cap5.html)\
+O código a seguir de exemplo, foi retirado do livro Engenharia de Software Moderna de Marco Tulio Valente do capítulo 5, sobre Princípios de Software.\
+[Link do Capítulo](https://engsoftmoderna.info/cap5.html)\
 Por exemplo, vamos supor que tenhamos essa lista de strings a seguir, mas que eu desejo alterar a forma de ordenar dela, ao invés de ordenar alfabeticamente, eu queira ordenar pelo tamanho da palavra.
 >List<String> nomes;\
->nomes = Arrays.asList("joao", "maria", "alexandre", "ze");\
+>nomes = Arrays.asList("joão", "maria", "alexandre", "ze");\
 >Collections.sort(nomes);
 >
 >System.out.println(nomes);\
->// resultado: ["alexandre","joao","maria","ze"]
+>// resultado: ["alexandre","joão","maria","ze"]
 
 Então para resolver este problema é preciso utilizar de um comparador para ver o tamanho das letras da seguinte forma: 
 >Comparator<String> comparador = new Comparator<String>() {\
@@ -49,14 +50,14 @@ Então para resolver este problema é preciso utilizar de um comparador para ver
 >};\
 >Collections.sort(nomes, comparador);\
 >System.out.println(nomes);\
->// resultado: [ze, joao, maria, alexandre]
+>// resultado: [ze, joão, maria, alexandre]
 
-Dessa forma, apesar do método .sort da classe Colections não ser modificado o seu próprio método, é possível perceber que eles está aberto a modificações já que foi possível estender para a forma que fosse desejado de ordenação da lista de strings.
+Dessa forma, apesar do método .sort da classe Collections não ser modificado o seu próprio método, é possível perceber que eles está aberto a modificações já que foi possível estender para a forma que fosse desejado de ordenação da lista de strings.
 
 ## 3. L — Liskov Substitution Principle (Princípio da substituição de Liskov)
 
 ### O que é?
-->  Para todos os métodos herdados das subclasses de uma classe pai, devem realizar as mesmas tarefas que o método original, quando substituidas.
+->  Para todos os métodos herdados das subclasses de uma classe pai, devem realizar as mesmas tarefas que o método original, quando substituídas.
 
 ### Para que serve?
 -> Serve para o código ficar mais extensível. Além de garantir a segurança nas relações de heranças, reuso de código e evitando a quebra de contratos entre superclasses e subclasses.
@@ -66,12 +67,12 @@ Dessa forma, apesar do método .sort da classe Colections não ser modificado o 
 [Link do Exemplo](Code_PrincipiosProjetos/src/Entidade/FilmeInfantil.java)
 
 Aqui foi suposto que uma classe nova chamada Filme Infantil, fosse criada herdando atributos da classe Filme. 
->Filme filme = new FilmeInfantil(1, "Divertidamente", "Livre");\
+>Filme filme = new FilmeInfantil(1, "Divertida Mente", "Livre");\
 >System.out.println(filme.getNome_filme());
  
-Se na Main fosse manipulado a criação de um objeto novo filme como descrito no código acima, mas fosse usado o construtor do Filme Infantil, ao tentarmos imprimir o titulo do filme, ou seja, o seu nome, ainda sim o código funcionaria corretamente, assim seguindo o princípio de Liskov que permite a substituição da clase pai por uma das subclasses herdadas.
+Se na Main fosse manipulado a criação de um objeto novo filme como descrito no código acima, mas fosse usado o construtor do Filme Infantil, ao tentarmos imprimir o título do filme, ou seja, o seu nome, ainda sim o código funcionaria corretamente, assim seguindo o princípio de Liskov que permite a substituição da classe pai por uma das subclasses herdadas.
 
-## 4. Princípio de Demeter
+## 4. Princípio de Deméter
 
 ### O que é?
 -> Também conhecido como Princípio do Mínimo Conhecimento, afirma que um objeto não deve acessar objetos internos de outro objeto, evitando longas "cadeias" de chamadas de métodos.
