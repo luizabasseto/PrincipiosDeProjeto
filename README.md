@@ -2,7 +2,7 @@
 
 Este repositório contém exemplos de código que ilustram quatro princípios importantes de projeto de software. Cada exemplo está documentado com explicações do que é o princípio, para que serve, e como o código implementado demonstra sua importância na prática.
 
--> Todos os códigos serão desenvolvidos na linguagem Java
+-> Todos os códigos serão desenvolvidos na linguagem Java, os códigos apresentados foram retirados de um trabalhoa antigo, e foram colocadas apenas as partes relativas aos princípios para explicação.
 
 ## Princípios Escolhidos
 
@@ -19,11 +19,9 @@ Este repositório contém exemplos de código que ilustram quatro princípios im
 
 ### Exemplo e explicação
 
-->
+->[Link do Exemplo](https://github.com/luizabasseto/PrincipiosDeProjeto/blob/812c9bcd23878862acccdef10a41e5b7899746c6/Code_PrincipiosProjetos/src/Entidade/Filme.java#L19C5-L21C10)
 
-#### Problema resolvido
-
--> 
+O problema aqui se tratava de um crud básico de filmes e seus atributos eram privados, para isso foi preciso utilizar uma função get() para pegar o valor do nome do filme. A função faz apenas esse papel, ou seja, tem essa única responsabilidade de pegar o nome do filme, sem pegar id, sem fazer qualquer esta função sem ser essa.
 
 ## 2. O — Open-Closed Principle (Princípio Aberto-Fechado)
 
@@ -53,10 +51,6 @@ Este repositório contém exemplos de código que ilustram quatro princípios im
 
 
 
-#### Problema resolvido
-
-
-
 ## 4. Princípio de Demeter
 
 ### O que é?
@@ -66,3 +60,7 @@ Este repositório contém exemplos de código que ilustram quatro princípios im
 -> Reduz o acoplamento e torna o sistema mais modular, além de garantir que o encapsulamento funcione de forma correta, já que essas longas cadeias, quebravam ele. Assim servindo para ocultar a informação que não seja necessária para o funcionamento daquele método ou função.
 
 ### Exemplo e explicação
+
+[Link para o Código de Exemplo](https://github.com/luizabasseto/PrincipiosDeProjeto/blob/db22c93923aafc0631dd38b0716ce5b6ada954c7/Code_PrincipiosProjetos/src/Entidade/Cinema.java#L22-L24)
+
+
