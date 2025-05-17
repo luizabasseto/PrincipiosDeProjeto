@@ -38,8 +38,8 @@ Por Exemplo, vamos supor que tenhamos essa lista de strings a seguir, mas que eu
 >nomes = Arrays.asList("joao", "maria", "alexandre", "ze");\
 >Collections.sort(nomes);
 >
->System.out.println(nomes);\ 
->// resultado: ["alexandre","joao","maria","ze"]\
+>System.out.println(nomes);\
+>// resultado: ["alexandre","joao","maria","ze"]
 
 Então para resolver este problema é preciso utilizar de um comparador para ver o tamanho das letras da seguinte forma: 
 >Comparator<String> comparador = new Comparator<String>() {\
