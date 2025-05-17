@@ -24,8 +24,16 @@ public class Cinema {
         this.filme = filme;
     }
 
-     public void setFillmeEmCartaz(Filme filme){
+     public void setFilmeEmCartaz(Filme filme){
           this.filmeCartaz = filme.getNome_filme();
                
+     }
+
+     public String getFilmeEmCartaz(){
+          return filmeCartaz;
+     }
+
+     public void PrintFilmeEmCartaz(Cinema cinema){
+          return cinema.getFilmeEmCartaz;
      }
 }  
