@@ -84,3 +84,6 @@ Se na Main fosse manipulado a criação de um objeto novo filme como descrito no
 [Link do Exemplo](https://github.com/luizabasseto/PrincipiosDeProjeto/blob/db22c93923aafc0631dd38b0716ce5b6ada954c7/Code_PrincipiosProjetos/src/Entidade/Cinema.java#L22-L24)
 
 -> Aqui segue o crud de filme, agora com o crud do cinema, em que é necessário imprimir os filmes que estão em cartaz no cinema. E para isso foi criado direto o método PrintFilmeEmCartaz, que acessa diretamente o filme em cartaz da classe Cinema pelo método getFilmeEmCartaz() sem precisar chamar outros métodos, para acessar a classe cinema e em seguida acessar a classe Filme para aí então consegui o nome do filme.
+
+## Conclusão
+A aplicação dos princípios de projeto SOLID e outros complementares melhora a manutenibilidade, a extensibilidade e a legibilidade do sistema. Os exemplos aqui apresentados demonstram como aplicar esses conceitos na prática de forma simples e eficaz.
