@@ -2,7 +2,7 @@
 
 Este repositório contém exemplos de código que ilustram quatro princípios importantes de projeto de software. Cada exemplo está documentado com explicações do que é o princípio, para que serve, e como o código implementado demonstra sua importância na prática.
 
--> Todos os códigos serão desenvolvidos na linguagem Java, os códigos apresentados foram retirados de um trabalhoa antigo, e foram colocadas apenas as partes relativas aos princípios para explicação.
+-> Todos os códigos serão desenvolvidos na linguagem Java, os códigos apresentados foram retirados de um trabalho antigo, e foram colocadas apenas as partes relativas aos princípios para explicação.
 
 ## Princípios Escolhidos
 
@@ -49,7 +49,12 @@ O problema aqui se tratava de um crud básico de filmes, e como todo crud é pre
 
 ### Exemplo e explicação
 
+[Link do Exemplo](Code_PrincipiosProjetos/src/Entidade/FilmeInfantil.java)
 
+Aqui foi suposto que uma classe nova chamada Filme Infantil, fosse criada herdando atributos da classe Filme. 
+>Filme filme = new FilmeInfantil(1, "Divertidamente", "Livre");
+>System.out.println(filme.getNome_filme()); 
+Se na Main fosse manipulado a criação de um objeto novo filme como descrito no código acima, mas fosse usado o construtor do Filme Infantil, ao tentarmos imprimir o titulo do filme, ou seja, o seu nome, ainda sim o código funcionaria corretamente, assim seguindo o princípio de Liskov que permite a substituição da clase pai por uma das subclasses herdadas.
 
 ## 4. Princípio de Demeter
 
