@@ -49,7 +49,7 @@ Então para resolver este problema é preciso utilizar de um comparador para ver
 >};\
 >Collections.sort(nomes, comparador);\
 >System.out.println(nomes);\
->// resultado: [ze, joao, maria, alexandre]\
+>// resultado: [ze, joao, maria, alexandre]
 
 Dessa forma, apesar do método .sort da classe Colections não ser modificado o seu próprio método, é possível perceber que eles está aberto a modificações já que foi possível estender para a forma que fosse desejado de ordenação da lista de strings.
 
