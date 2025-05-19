@@ -34,7 +34,7 @@ O problema aqui se tratava de um crud básico de filmes, e como todo crud é pre
 ### Exemplo e explicação
 O código a seguir de exemplo, foi retirado do livro Engenharia de Software Moderna de Marco Tulio Valente do capítulo 5, sobre Princípios de Software.\
 [Link do Capítulo](https://engsoftmoderna.info/cap5.html)\
-Por exemplo, vamos supor que tenhamos essa lista de strings a seguir, mas que eu desejo alterar a forma de ordenar dela, ao invés de ordenar alfabeticamente, eu queira ordenar pelo tamanho da palavra.
+Por exemplo, vamos supor que tenhamos essa lista de strings a seguir, mas que eu desejo alterar a forma de ordenar dela, ao invés de ordenar alfabeticamente, seja desejado uma ordenação pelo tamanho da palavra.
 >List<String> nomes;\
 >nomes = Arrays.asList("joão", "maria", "alexandre", "ze");\
 >Collections.sort(nomes);
