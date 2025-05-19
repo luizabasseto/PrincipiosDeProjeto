@@ -21,7 +21,7 @@ Este repositório contém exemplos de código que ilustram quatro princípios im
 
 ->[Link do Exemplo](https://github.com/luizabasseto/PrincipiosDeProjeto/blob/8fcf3a53daa25d052552afe0c9c103eaa6a2137d/Code_PrincipiosProjetos/src/Controle/ControleFilme.java#L23C5-L26C1)
 
-O problema aqui se tratava de um crud básico de filmes, e como todo crud é preciso adicionar na lista um valor, por isso na package de Controle, há o método adicionar que faz sua única função de adicionar um valor de filme  a lista de filmes. Seguindo o princípio da responsabilidade única.
+O problema aqui se tratava de um CRUD básico de filmes, e como todo crud é preciso adicionar na lista um valor, por isso na package de Controle, há o método adicionar que faz sua única função de adicionar um valor de filme  a lista de filmes. Seguindo o princípio da responsabilidade única.
 
 ## 2. O — Open-Closed Principle (Princípio Aberto-Fechado)
 
@@ -52,7 +52,7 @@ Então para resolver este problema é preciso utilizar de um comparador para ver
 >System.out.println(nomes);\
 >// resultado: [ze, joão, maria, alexandre]
 
-Dessa forma, apesar do método .sort da classe Collections não ser modificado o seu próprio método, é possível perceber que eles está aberto a modificações já que foi possível estender para a forma que fosse desejado de ordenação da lista de strings.
+Dessa forma, apesar do método .sort da classe Collections não ser modificado em sua própria classe, é possível perceber que eles está aberto a modificações já que foi possível estender para a forma que fosse desejado de ordenação da lista de strings.
 
 ## 3. L — Liskov Substitution Principle (Princípio da substituição de Liskov)
 
@@ -66,7 +66,8 @@ Dessa forma, apesar do método .sort da classe Collections não ser modificado o
 
 [Link do Exemplo](Code_PrincipiosProjetos/src/Entidade/FilmeInfantil.java)
 
-Aqui foi suposto que uma classe nova chamada Filme Infantil, fosse criada herdando atributos da classe Filme. 
+Aqui foi suposto que uma classe nova chamada Filme Infantil, fosse criada herdando atributos da classe Filme.
+
 >Filme filme = new FilmeInfantil(1, "Divertida Mente", "Livre");\
 >System.out.println(filme.getNome_filme());
  
@@ -84,7 +85,7 @@ Se na Main fosse manipulado a criação de um objeto novo filme como descrito no
 
 [Link do Exemplo](https://github.com/luizabasseto/PrincipiosDeProjeto/blob/db22c93923aafc0631dd38b0716ce5b6ada954c7/Code_PrincipiosProjetos/src/Entidade/Cinema.java#L22-L24)
 
--> Aqui segue o crud de filme, agora com o crud do cinema, em que é necessário imprimir os filmes que estão em cartaz no cinema. E para isso foi criado direto o método PrintFilmeEmCartaz, que acessa diretamente o filme em cartaz da classe Cinema pelo método getFilmeEmCartaz() sem precisar chamar outros métodos, para acessar a classe cinema e em seguida acessar a classe Filme para aí então consegui o nome do filme.
+-> Aqui segue o crud de filme, agora com o CRUD do cinema, em que é necessário imprimir os filmes que estão em cartaz no cinema. E para isso foi criado direto o método PrintFilmeEmCartaz, que acessa diretamente o filme em cartaz da classe Cinema pelo método getFilmeEmCartaz() sem precisar chamar outros métodos, para acessar a classe cinema e em seguida acessar a classe Filme para aí então consegui o nome do filme.
 
 ## Conclusão
 A aplicação dos princípios de projeto SOLID e outros complementares melhora a manutenibilidade, a extensibilidade e a legibilidade do sistema. Os exemplos aqui apresentados demonstram como aplicar esses conceitos na prática de forma simples e eficaz.
